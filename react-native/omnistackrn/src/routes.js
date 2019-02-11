@@ -1,12 +1,16 @@
-import { createSwitchNavigator, createAppContainer } from 'react';
+import { createSwitchNavigator, createStacknavigator, createAppContainer } from "react";
 
-import Login from './pages/Login';
-import TimeLine from './pages/Timeline';
+import Login from "./pages/Login";
+import TimeLine from "./pages/Timeline";
+import New from "./pages/New";
 
 const Routes = createAppContainer(
     createSwitchNavigator({
         Login,
-        TimeLine
+        App: createStacknavigator({
+            TimeLine,
+            New
+        })
     })
 );
 

@@ -1,3 +1,28 @@
+import React, { Component } from "react";
+
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+
+import Icon from "react-native-vector-icons/Ionicons";
+
+import Tweet from "../components/Tweet";
+
+export default class Tweet extends Component {
+    render() {
+      return (
+        <View style={styles.container}>
+          <Text style={styles.author}>{tweet.author}</Text>
+          <Text style={styles.content}>{tweet.content}</Text>
+
+          <TouchableOpacity onPress={() =>{}} style={styles.likes}>
+            <Icon name="heart-empty" size={20} color="#999"/>
+            <Text style={styles.likeText}>{tweet.likes}</Text>
+          </TouchableOpacity>
+
+        </View>
+      );
+    }
+}
+
 const styles = StyleSheet.create({
   container: {
     padding: 20,

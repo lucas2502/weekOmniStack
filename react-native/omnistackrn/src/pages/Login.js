@@ -22,7 +22,7 @@ export default class Login extends Component {
     const username = await AsyscStorage.getItem("@OminiStack:username");
 
     if( username ){
-      this.props.navigation.navigate("Timeline");
+      this.props.navigation.navigate("App");
     };
   }
 

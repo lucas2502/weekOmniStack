@@ -1,9 +1,17 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom'
+
+import Routes from './routes'
+import Header from './components/Header'
+
 import './global.css'
 
 function App() {
   return (
-    <h1>Hello Word!</h1>
+    <BrowserRouter>
+      <Header />
+      <Routes />
+    </BrowserRouter>
   );
 }
 
